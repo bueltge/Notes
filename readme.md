@@ -1,5 +1,5 @@
 # Notes
-Just a simple editor for saving all my motes online.
+Just a simple editor for saving all my notes online.
 
 ### Screenshot
 ![Screenshot](https://raw.github.com/bueltge/Notes/master/assets/screenshot.png "A screenshot")
