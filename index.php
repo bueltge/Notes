@@ -20,17 +20,24 @@ if ( is_readable( $notesfile ) ) {
 	<head>
 		<meta charset="utf-8">
 		<title>Notes</title>
+		<meta name="viewport" content="width=device-width">
 		
 		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css"></link>
 		<link rel="stylesheet" type="text/css" href="lib/css/prettify.css"></link>
 		<link rel="stylesheet" type="text/css" href="src/bootstrap-wysihtml5.css"></link>
 		<link rel="shortcut icon" href="http://bueltge.de/favicon.ico" />
 		<style>
-			#wrap { margin: 3em auto; width: 80%; }
-			textarea {
-				width: 100%;
-				height: 400px;
+			body, html{
+				height: 98%;
+				background-color: #e6e6e6;
 			}
+			#wrap { margin: 2% auto; width: 80%; height: 80%; }
+			textarea, #editor_iframe {
+				width: 100%;
+				height: 80% !important;
+				min-height: 250px; /* Fallback Mobile */
+			}
+			input[type="submit"] { width: 5%; }
 		</style>
 	</head>
 	<body>
@@ -40,7 +47,7 @@ if ( is_readable( $notesfile ) ) {
 			<form action="index.php" method="post" id="notes_form">
 				<textarea id="notes" name="content"><?php if ( isset( $content ) ) echo $content; ?></textarea>
 				<br>
-				<input type="submit" name="submit" value="Submit" />
+				<input class="btn btn-primary" type="submit" name="submit" value="Submit" />
 			</form>
 			
 			<footer>&hearts; <a href="http://bueltge.de">Frank Bültge</a> &middot; <a href="https://github.com/bueltge/Notes">Project on Github</a></footer>
