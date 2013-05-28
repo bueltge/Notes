@@ -37,7 +37,6 @@ if ( is_readable( $notesfile ) ) {
 				height: 80% !important;
 				min-height: 250px; /* Fallback Mobile */
 			}
-			input[type="submit"] { width: 5%; }
 		</style>
 	</head>
 	<body>
