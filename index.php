@@ -1,7 +1,7 @@
 <?php
 $notesfile = 'data';
 if ( isset( $_POST['content'] ) ) {
-	$handle  = fopen( $notesfile, 'w' );
+	$handle	= fopen( $notesfile, 'w' );
 	$content = $_POST['content'];
 	// only text?
 	//$content = filter_var( $_POST['content'], FILTER_SANITIZE_STRING );
@@ -10,7 +10,7 @@ if ( isset( $_POST['content'] ) ) {
 }
 
 if ( is_readable( $notesfile ) ) {
-	$handle  = fopen ( $notesfile, 'r' );
+	$handle	= fopen ( $notesfile, 'r' );
 	$content = stream_get_contents( $handle );
 	fclose( $handle );
 }
@@ -23,8 +23,12 @@ if ( is_readable( $notesfile ) ) {
 		<meta name="viewport" content="width=device-width">
 		
 		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css"></link>
-		<link rel="stylesheet" type="text/css" href="lib/css/prettify.css"></link>
-		<link rel="stylesheet" type="text/css" href="src/bootstrap-wysihtml5.css"></link>
+		<link rel="stylesheet" type="text/css" href="lib/css/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.8.16.custom.css"></link>
+		<link rel="stylesheet" type="text/css" href="lib/css/hallo.css"></link>
+		<link rel="stylesheet" type="text/css" href="lib/css/fontawesome/css/font-awesome.css"></link>
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" href="lib/css/fontawesome/css/font-awesome-ie7.css" charset="utf-8" />
+		<![endif]-->
 		<link rel="shortcut icon" href="http://bueltge.de/favicon.ico" />
 		<style>
 			body, html{
@@ -32,10 +36,20 @@ if ( is_readable( $notesfile ) ) {
 				background-color: #e6e6e6;
 			}
 			#wrap { margin: 2% auto; width: 80%; height: 80%; }
-			textarea, #editor_iframe {
+			textarea, #editor_iframe, #content {
 				width: 100%;
-				height: 80% !important;
-				min-height: 250px; /* Fallback Mobile */
+				height: auto;
+				min-height: 50% !important;
+				margin-bottom: 1em;
+			}
+			footer {
+				margin-top: 3em;
+			}
+			.modified {
+				position: fixed;
+				top: 1em;
+				right: 10%;
+				cursor: default;
 			}
 		</style>
 	</head>
@@ -43,48 +57,22 @@ if ( is_readable( $notesfile ) ) {
 		
 		<div id="wrap">
 			<h1>Notes</h1>
-			<form action="index.php" method="post" id="notes_form">
-				<textarea id="notes" name="content"><?php if ( isset( $content ) ) echo $content; ?></textarea>
-				<br>
-				<input class="btn btn-primary" type="submit" name="submit" value="Submit" />
-			</form>
+			<p class="modified btn btn-danger"> </p>
+			<textarea id="source"></textarea>
+			<div id="content" class="editable form-control"><?php if ( isset( $content ) ) echo $content; ?></div>
+			<button type="button" class="save_editable btn btn-primary">Save</button>
 			
 			<footer>&hearts; <a href="http://bueltge.de">Frank Bültge</a> &middot; <a href="https://github.com/bueltge/Notes">Project on Github</a></footer>
 		</div>
 		
-		<script src="lib/js/wysihtml5-0.3.0.js"></script>
 		<script src="lib/js/jquery-2.0.1.min.js"></script>
-		<script src="lib/js/prettify.js"></script>
-		<script src="lib/js/bootstrap.min.js"></script>
-		<script src="src/bootstrap-wysihtml5.js"></script>
-		
-		<script>
-		// @see: https://github.com/jhollingworth/bootstrap-wysihtml5/
-		$('#notes').wysihtml5({
-			"font-styles": true,
-			"emphasis": true,
-			"lists": true,
-			"html": false,
-			"link": true,
-			"image": false,
-			"color": false
-		});
-		
-		$( '.wysihtml5-sandbox' ).ready( function() {
-			$( '.wysihtml5-sandbox').attr( 'id', 'editor_iframe' );
-			
-			var frame = document.getElementById( "editor_iframe" );
-			var frameWin=(frame.contentWindow || frame.contentDocument);
-			
-			$( frameWin.document ).keydown( function( e ) {
-				if ( e.which == 13 ) { // When key pressed is "Enter" key.
-					e.preventDefault();
-					console-log( 'keydown' );
-					$( '#notes_form' ).submit();
-				}
-			});
-		});
-		</script>
+		<script src="lib/js/jquery-ui-1.10.2.min.js"></script>
+		<script src="lib/js/rangy-core-1.2.3.js"></script>
+		<script src="lib/js/hallo.js"></script>
+		<script src="lib/js/showdown.js"></script>
+		<script src="lib/js/to-markdown.js"></script>
+		<script src="lib/js/jquery.textarea.min.js"></script>
+		<script src="lib/js/editor.js"></script>
 		
 	</body>
 </html>
