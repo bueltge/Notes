@@ -45,7 +45,11 @@ class Core {
 	 */
 	public function get_view() {
 		
-		require_once N_ROOT . 'lib/package/view.php';
+		// check for custom view
+		if ( file_exists( N_ROOT . 'view.php' ) )
+			require_once N_ROOT . 'view.php';
+		else // use default view
+			require_once N_ROOT . 'lib/package/view.php';
 	}
 	
 	/**
