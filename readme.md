@@ -3,7 +3,7 @@ Just a simple editor for saving all my notes online.
 The current version have a source and preview mode. It is possible to write on source or preview window, also with WYSIWYG Editor.
 
 ### Configuration
-The current version have a config File `config.php` in the root of this install.
+The current version have a config file `config.php` in the root of this install.
 You find a documentation on all possibilities, all constants.
 
 If you will create a custom view, then add a `view.php` in the root folder. Notes will check this and use your custom view. The defautlt view is inside `lib/package/view.php`. Use this as starter or example for your custom view.
