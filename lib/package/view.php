@@ -22,7 +22,7 @@ use \lib\package\Core as N;
 		<!--[if lt IE 9]>
 			<link rel="stylesheet" href="lib/css/fontawesome/css/font-awesome-ie7.css" charset="utf-8" />
 		<![endif]-->
-		<link rel="shortcut icon" href="http://bueltge.de/favicon.ico" />
+		<link rel="shortcut icon" href="./favicon.ico" />
 		<style>
 			body, html{
 				height: 98%;

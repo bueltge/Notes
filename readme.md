@@ -26,6 +26,8 @@ Please let me know if you like the plugin or you hate it or whatever ... Please 
  * [Hallo](http://hallojs.org/) - contentEditable for jQuery UI 
  * [Showdown](https://github.com/coreyti/showdown) - A JavaScript port of Markdown
  * [to-markdown](http://domchristie.github.io/to-markdown/) - An HTML to Markdown converter written in javascript.
+ * [Bootstrap 2*](http://getbootstrap.com/) - Sleek, intuitive, and powerful mobile-first front-end framework for faster and easier web development.
+ * [Font Awesome](http://fortawesome.github.io/Font-Awesome/) - The iconic font designed for Bootstrap
 
 ### Disclaimer
 I'm German and my English might be gruesome here and there. So please be patient with me and let me know of typos or grammatical farts. Thanks
