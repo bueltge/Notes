@@ -49,13 +49,12 @@ use \lib\package\Core as N;
 	<body>
 		
 		<div id="wrap">
-			<h1>Notes</h1>
+			<h1><i class="icon-pencil"></i> Notes</h1>
 			<p class="modified btn btn-danger"> </p>
-			<textarea id="source" <?php if ( ! SOURCE ) echo ' style="display: none;"' ?> ></textarea>
-			<div id="content" class="editable form-control"><?php N::g(); ?></div>
-			<button type="button" class="save_editable btn btn-primary">Save</button>
+			<?php N::get_editor( 'DESC', FALSE ); ?>
+			<button type="button" class="save_editable btn btn-primary btn-large"><i class="icon-save"></i> Save</button>
 			
-			<footer>&hearts; <a href="http://bueltge.de">Frank Bültge</a> &middot; <a href="https://github.com/bueltge/Notes">Project on Github</a></footer>
+			<footer><i class="icon-heart"></i> <a href="http://bueltge.de">Frank Bültge</a> &middot; <i class="icon-github"></i> <a href="https://github.com/bueltge/Notes">Project on Github</a></footer>
 		</div>
 		
 		<script src="lib/js/jquery-2.0.1.min.js"></script>

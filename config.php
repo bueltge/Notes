@@ -30,11 +30,21 @@ define( 'LANG', 'de' );
  * View source area
  * 
  * Set to FALSE, if you will only see the formatted area with WYSIWYG editor
- * Default is TRUE for see all possibilities
+ * Default is FALSE, set TRUE for see all possibilities
  * 
  * @const   boolean
  */
-define( 'SOURCE', TRUE );
+define( 'SOURCE', FALSE );
+
+/**
+ * Set order of Source and WYSIWXG editor
+ * 
+ * Set to DESC, if you will see the WYSIWYG editor on top, before the source editor
+ * Default is ASC
+ * 
+ * @const   string
+ */
+define( 'ORDER', 'ASC' );
 
 /**
  * For developers: debugging mode.

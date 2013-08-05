@@ -131,4 +131,37 @@ class Core {
 		fclose( $handle );
 	}
 	
+	/**
+	 * Display Editor, Source and WYSIWYG mode
+	 * 
+	 * @param   string  $order    Use ASC or DESC for order of editor areas; ASC set the sourc editor on top
+	 *                            You overwrite the value vis constant ORDER
+	 * @param   boolean $displax  Display the source editor.
+	 *                            You overwrite this var via const SOURCE in config.php_check_syntax
+	 * @return  void
+	 */
+	public static function get_editor( $order = 'ASC', $display = TRUE ) {
+		
+		if ( defined( 'ORDER' ) )
+			$order = ORDER; 
+		
+		if ( defined( 'SOURCE' ) )
+			$display = SOURCE;
+		
+		if ( ! $display )
+			$display = ' style="display: none;"';
+		
+		if ( 'ASC' === $order ) {
+		?>
+			<textarea id="source"<?php echo $display; ?>></textarea>
+			<div id="content" class="editable form-control"><?php self::g(); ?></div>
+		<?php
+		} else {
+		?>
+			<div id="content" class="editable form-control"><?php self::g(); ?></div>
+			<textarea id="source"<?php echo $display; ?>></textarea>
+		<?php
+		}
+	}
+	
 } // end class 
