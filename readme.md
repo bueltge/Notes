@@ -17,7 +17,7 @@ If you will create a custom view, then add a `view.php` in the root folder. Note
 Good news, this script is free for everyone! Since it's released under the GPL, you can use it free of charge on your personal or commercial blog. But if you enjoy this script, you can thank me and leave a [small donation](http://bueltge.de/wunschliste/) for the time I've spent writing and supporting this script. And I really don't want to know how many hours of my life this plugin has already eaten ;)
 
 ### Contact & Feedback
-This script is designed and developed by me ([Frank Bültge](http://bueltge.de))
+This script is designed and developed by me ([Frank Bültge](http://bueltge.de)), [G+ Page](https://plus.google.com/111291152590065605567/about?rel=author)
 
 Please let me know if you like the plugin or you hate it or whatever ... Please fork it, add an issue for ideas and bugs.
 
