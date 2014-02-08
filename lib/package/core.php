@@ -154,6 +154,8 @@ class Core {
 		
 		if ( ! $display )
 			$display = ' style="display: none;"';
+		else
+			$display = '';
 		
 		if ( 'ASC' === $order ) {
 		?>
