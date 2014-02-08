@@ -34,7 +34,7 @@ define( 'LANG', 'de' );
  * 
  * @const   boolean
  */
-define( 'SOURCE', FALSE );
+define( 'SOURCE', TRUE );
 
 /**
  * Set order of Source and WYSIWXG editor

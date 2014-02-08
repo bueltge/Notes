@@ -70,6 +70,6 @@ use \lib\package\Core as N;
 		<script src="lib/js/to-markdown.js"></script>
 		<script src="lib/js/jquery.textarea.min.js"></script>
 		<script src="lib/js/editor.js"></script>
-		
+				
 	</body>
 </html>
