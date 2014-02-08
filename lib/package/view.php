@@ -35,13 +35,18 @@ use \lib\package\Core as N;
 				min-height: 50% !important;
 				margin-bottom: 1em;
 			}
+			button.save_editable {
+				position: fixed;
+				right: 1%;
+				bottom: 1%;			
+			}
 			footer {
-				margin-top: 3em;
+				padding: 3% 0;
 			}
 			.modified {
 				position: fixed;
-				top: 1em;
-				right: 10%;
+				top: 1%;
+				right: 1%;
 				cursor: default;
 			}
 		</style>
